@@ -184,7 +184,7 @@ const Index = () => {
                     <div className="w-20 h-20 bg-gradient-to-br from-gold to-gold-dark rounded-full flex items-center justify-center mx-auto mb-4">
                       <Icon name="Users" size={36} className="text-black" />
                     </div>
-                    <CardTitle className="text-white font-montserrat">Квалифицированный персонал</CardTitle>
+                    <CardTitle className="text-white font-montserrat">Опытный персонал</CardTitle>
                     <CardDescription className="text-gray-light">
                       Все сотрудники имеют лицензии частного охранника и регулярно проходят аттестацию
                     </CardDescription>
