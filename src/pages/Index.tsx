@@ -106,7 +106,8 @@ const Index = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-light mb-8 max-w-2xl mx-auto">
-              ЧОП «БУРЕВЕСТНИК-РУС» обеспечит охрану порядка любых массовых мероприятий: концерты, корпоративы, спортивные мероприятия, бизнес-конференции
+              <span className="text-gold text-2xl font-bold font-montserrat block mb-2">ЧОП «БУРЕВЕСТНИК-РУС»</span>
+              обеспечит охрану порядка любых массовых мероприятий: концерты, корпоративы, спортивные мероприятия, бизнес-конференции
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button 
