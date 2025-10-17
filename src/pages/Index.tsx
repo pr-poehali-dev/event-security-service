@@ -248,7 +248,7 @@ const Index = () => {
 
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { icon: 'Award', text: 'Соответствие ГОСТ Р' },
+              { icon: 'Award', text: 'Официально' },
               { icon: 'FileCheck', text: 'Все разрешения' },
               { icon: 'ShieldCheck', text: 'Страхование' }
             ].map((item, index) => (
