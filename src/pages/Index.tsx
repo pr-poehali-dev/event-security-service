@@ -150,6 +150,91 @@ const Index = () => {
         </div>
       </section>
 
+      {/* About Company */}
+      <section id="о компании" className="py-20 px-4 bg-gradient-to-b from-black to-gray-dark">
+        <div className="container mx-auto">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-white mb-4 font-montserrat">
+                О компании БУРЕВЕСТНИК-РУС
+              </h2>
+              <p className="text-gold text-xl font-semibold">Надежная защита вашего мероприятия с 2015 года</p>
+            </div>
+
+            <div className="space-y-8">
+              <Card className="bg-gradient-to-br from-gray-dark to-black border-gold/30">
+                <CardContent className="p-8">
+                  <p className="text-gray-light text-lg leading-relaxed mb-6">
+                    <span className="text-white font-semibold">ЧОП «БУРЕВЕСТНИК-РУС»</span> — это профессиональная охранная компания, 
+                    специализирующаяся на обеспечении безопасности массовых мероприятий любого масштаба. 
+                    Мы работаем в Москве и Московской области более 10 лет, за это время успешно обеспечили 
+                    безопасность более 500 мероприятий.
+                  </p>
+                  <p className="text-gray-light text-lg leading-relaxed">
+                    Наша команда — это <span className="text-gold font-semibold">опытные специалисты</span> с профильным образованием, 
+                    прошедшие строгий отбор и регулярное обучение. Мы используем современное оборудование 
+                    для видеонаблюдения и связи, что позволяет оперативно реагировать на любые ситуации.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <Card className="bg-black border-gold/30 hover:border-gold transition-all">
+                  <CardHeader className="text-center">
+                    <div className="w-20 h-20 bg-gradient-to-br from-gold to-gold-dark rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Icon name="Users" size={36} className="text-black" />
+                    </div>
+                    <CardTitle className="text-white font-montserrat">Квалифицированный персонал</CardTitle>
+                    <CardDescription className="text-gray-light">
+                      Все сотрудники имеют лицензии частного охранника и регулярно проходят аттестацию
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
+
+                <Card className="bg-black border-gold/30 hover:border-gold transition-all">
+                  <CardHeader className="text-center">
+                    <div className="w-20 h-20 bg-gradient-to-br from-gold to-gold-dark rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Icon name="Headphones" size={36} className="text-black" />
+                    </div>
+                    <CardTitle className="text-white font-montserrat">Индивидуальный подход</CardTitle>
+                    <CardDescription className="text-gray-light">
+                      Разрабатываем план охраны с учетом специфики вашего мероприятия
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
+
+                <Card className="bg-black border-gold/30 hover:border-gold transition-all">
+                  <CardHeader className="text-center">
+                    <div className="w-20 h-20 bg-gradient-to-br from-gold to-gold-dark rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Icon name="BadgeCheck" size={36} className="text-black" />
+                    </div>
+                    <CardTitle className="text-white font-montserrat">Гарантии качества</CardTitle>
+                    <CardDescription className="text-gray-light">
+                      Работаем официально по договору со страхованием ответственности
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
+              </div>
+
+              <Card className="bg-gradient-to-r from-gold/10 to-gold-dark/10 border-gold/50">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-4">
+                    <Icon name="Award" size={48} className="text-gold" />
+                    <div>
+                      <h3 className="text-white font-bold text-xl mb-2 font-montserrat">Наша миссия</h3>
+                      <p className="text-gray-light">
+                        Обеспечить безопасность и спокойствие на вашем мероприятии, чтобы вы могли 
+                        сосредоточиться на главном, доверив охрану профессионалам.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services */}
       <section id="услуги" className="py-20 px-4 bg-black">
         <div className="container mx-auto">
