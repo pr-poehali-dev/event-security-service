@@ -209,8 +209,75 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Reviews Section */}
+      <section id="отзывы" className="py-20 px-4 bg-gradient-to-b from-black to-gray-dark">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4 font-montserrat">
+              Отзывы наших клиентов
+            </h2>
+            <p className="text-gray-light text-lg">Что говорят о нас заказчики</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {[
+              {
+                name: 'Алексей Морозов',
+                company: 'Event Agency "Премиум"',
+                text: 'Сотрудничаем с БУРЕВЕСТНИК-РУС уже второй год. Охраняли более 20 наших мероприятий - всегда профессионально и без нареканий. Особенно порадовала работа на корпоративе с 500+ гостями.',
+                rating: 5
+              },
+              {
+                name: 'Марина Соколова',
+                company: 'Ресторан "Seasons"',
+                text: 'Заказывали охрану для свадьбы дочери. Очень переживали, но ребята работали незаметно и тактично. Гости даже не заметили охрану, но порядок был идеальный. Спасибо!',
+                rating: 5
+              },
+              {
+                name: 'Игорь Петров',
+                company: 'ООО "ТехноСтрой"',
+                text: 'Организовывали выставку строительного оборудования. БУРЕВЕСТНИК-РУС обеспечил полный контроль доступа, досмотр и безопасность экспонатов. Работают четко по регламенту.',
+                rating: 5
+              },
+              {
+                name: 'Елена Васильева',
+                company: 'Концертное агентство',
+                text: 'Охраняли концерт на 2000 человек. Отлично организовали потоки людей, не было давки и конфликтов. Профессионалы своего дела! Будем обращаться ещё.',
+                rating: 5
+              },
+              {
+                name: 'Дмитрий Кузнецов',
+                company: 'Спортивный клуб "Чемпион"',
+                text: 'Заказывали охрану для турнира по боксу. Сотрудники опытные, физически подготовленные, знают как работать с большими скоплениями людей. Рекомендую!',
+                rating: 5
+              }
+            ].map((review, index) => (
+              <Card key={index} className="bg-gradient-to-br from-gray-dark to-black border-gold/20 hover:border-gold/50 transition-all">
+                <CardHeader>
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-12 h-12 bg-gradient-to-br from-gold to-gold-dark rounded-full flex items-center justify-center text-black font-bold text-lg">
+                      {review.name.charAt(0)}
+                    </div>
+                    <div>
+                      <CardTitle className="text-white text-base font-montserrat">{review.name}</CardTitle>
+                      <CardDescription className="text-gold text-sm">{review.company}</CardDescription>
+                    </div>
+                  </div>
+                  <div className="flex gap-1 mb-3">
+                    {[...Array(review.rating)].map((_, i) => (
+                      <Icon key={i} name="Star" size={16} className="text-gold fill-gold" />
+                    ))}
+                  </div>
+                  <p className="text-gray-light text-sm leading-relaxed">{review.text}</p>
+                </CardHeader>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* License Section */}
-      <section id="лицензии" className="py-20 px-4 bg-gradient-to-b from-black to-gray-dark">
+      <section id="лицензии" className="py-20 px-4 bg-black">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4 font-montserrat">
