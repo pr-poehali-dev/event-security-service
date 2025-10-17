@@ -68,7 +68,7 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 bg-gradient-to-b from-black via-gray-dark to-black overflow-hidden">
+      <section id="главная" className="relative pt-32 pb-20 px-4 bg-gradient-to-b from-black via-gray-dark to-black overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(201,169,97,0.1),transparent_50%)]" />
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
