@@ -55,9 +55,36 @@ const Index = () => {
     { icon: 'Clock', title: '24/7 Поддержка', description: 'Круглосуточная готовность к выезду' }
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState('');
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+    setSubmitMessage('');
+
+    try {
+      const response = await fetch('https://functions.poehali.dev/9675291f-71d6-4bf3-859c-1c4dc59525e9', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitMessage('✅ Заявка отправлена! Мы свяжемся с вами в ближайшее время.');
+        setFormData({ name: '', phone: '', message: '' });
+      } else {
+        setSubmitMessage(data.error || '❌ Ошибка отправки. Позвоните нам: 8 (499) 000-00-00');
+      }
+    } catch (error) {
+      setSubmitMessage('❌ Ошибка соединения. Позвоните нам: 8 (499) 000-00-00');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -724,10 +751,19 @@ const Index = () => {
                     className="bg-black border-gold/30 text-white placeholder:text-gray-light focus:border-gold min-h-[120px]"
                   />
                 </div>
-                <Button type="submit" className="w-full bg-gradient-to-r from-gold to-gold-dark text-black font-bold text-lg py-6 hover:opacity-90">
+                <Button 
+                  type="submit" 
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-gold to-gold-dark text-black font-bold text-lg py-6 hover:opacity-90 disabled:opacity-50"
+                >
                   <Icon name="Send" size={20} className="mr-2" />
-                  Отправить заявку
+                  {isSubmitting ? 'Отправка...' : 'Отправить заявку'}
                 </Button>
+                {submitMessage && (
+                  <p className={`text-center font-semibold ${submitMessage.includes('✅') ? 'text-green-400' : 'text-red-400'}`}>
+                    {submitMessage}
+                  </p>
+                )}
                 <p className="text-xs text-gray-light text-center">
                   Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
                 </p>
