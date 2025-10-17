@@ -45,8 +45,8 @@ const Index = () => {
       <nav className="fixed top-0 w-full bg-black/95 backdrop-blur-sm z-50 border-b border-gold/20">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <Icon name="Shield" className="text-gold" size={32} />
+            <div className="flex items-center gap-3">
+              <img src="https://cdn.poehali.dev/files/41844b36-8d3a-4b2a-821c-6f057a7bd6e1.png" alt="Логотип БУРЕВЕСТНИК-РУС" className="w-12 h-12" />
               <div>
                 <h1 className="text-xl font-bold text-white font-montserrat">БУРЕВЕСТНИК-РУС</h1>
                 <p className="text-xs text-gold">Охранные услуги</p>
@@ -626,8 +626,8 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
-              <div className="flex items-center gap-2 mb-4">
-                <Icon name="Shield" className="text-gold" size={32} />
+              <div className="flex items-center gap-3 mb-4">
+                <img src="https://cdn.poehali.dev/files/41844b36-8d3a-4b2a-821c-6f057a7bd6e1.png" alt="Логотип БУРЕВЕСТНИК-РУС" className="w-16 h-16" />
                 <h3 className="text-xl font-bold text-white font-montserrat">БУРЕВЕСТНИК-РУС</h3>
               </div>
               <p className="text-gray-light text-sm mb-4">
