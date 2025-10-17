@@ -81,7 +81,7 @@ const Index = () => {
               ))}
             </div>
             <Button 
-              className="hidden md:block bg-gradient-to-r from-gold to-gold-dark text-black font-bold hover:opacity-90"
+              className="hidden md:flex items-center bg-gradient-to-r from-gold to-gold-dark text-black font-bold hover:opacity-90"
               onClick={() => document.getElementById('контакты')?.scrollIntoView({ behavior: 'smooth' })}
             >
               <Icon name="Phone" size={16} className="mr-2" />
