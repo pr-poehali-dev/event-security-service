@@ -529,11 +529,14 @@ const Index = () => {
           
           <Card className="bg-gradient-to-br from-gray-dark to-black border-2 border-gold/30 hover:border-gold transition-all">
             <CardContent className="p-8">
-              <div className="flex flex-col md:flex-row items-center gap-8">
-                <div className="w-24 h-24 bg-gradient-to-br from-gold to-gold-dark rounded-full flex items-center justify-center flex-shrink-0">
-                  <Icon name="ShieldCheck" size={48} className="text-black" />
+              <div className="flex flex-col lg:flex-row items-center gap-8">
+                <div className="flex items-center gap-8">
+                  <div className="w-24 h-24 bg-gradient-to-br from-gold to-gold-dark rounded-full flex items-center justify-center flex-shrink-0">
+                    <Icon name="ShieldCheck" size={48} className="text-black" />
+                  </div>
+                  <img src="https://cdn.poehali.dev/files/41844b36-8d3a-4b2a-821c-6f057a7bd6e1.png" alt="Шеврон БУРЕВЕСТНИК-РУС" className="w-24 h-24 flex-shrink-0" />
                 </div>
-                <div className="flex-1 text-center md:text-left">
+                <div className="flex-1 text-center lg:text-left">
                   <h3 className="text-2xl font-bold text-white mb-4 font-montserrat">
                     Лицензия на осуществление частной охранной деятельности
                   </h3>
