@@ -634,7 +634,7 @@ const Index = () => {
                 индекс 109156, г. Люберцы,<br />
                 ул. Комсомольская д. 15А, пом. 25
               </p>
-              <p className="text-gray-light text-sm">Пн-Пт: 8:00 - 21:00</p>
+              <p className="text-gray-light text-sm">Пн-Пт: 9:30 - 18:00</p>
             </div>
             <div>
               <h4 className="text-white font-bold mb-4 font-montserrat">Охрана объектов</h4>
