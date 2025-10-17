@@ -654,9 +654,15 @@ const Index = () => {
                       от <span className="text-gold font-semibold">21 мая 2025 г.</span>
                     </p>
                   </div>
-                  <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 bg-gold/10 border border-gold/30 rounded-lg">
-                    <Icon name="CheckCircle" size={20} className="text-gold" />
-                    <span className="text-gold font-semibold">Проверено и подтверждено</span>
+                  <div className="mt-6 flex flex-wrap gap-3 justify-center lg:justify-start">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold/10 border border-gold/30 rounded-lg">
+                      <Icon name="CheckCircle" size={20} className="text-gold" />
+                      <span className="text-gold font-semibold">Проверено и подтверждено</span>
+                    </div>
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold/10 border border-gold/30 rounded-lg">
+                      <Icon name="BadgeCheck" size={20} className="text-gold" />
+                      <span className="text-gold font-semibold">Действующая</span>
+                    </div>
                   </div>
                 </div>
               </div>
