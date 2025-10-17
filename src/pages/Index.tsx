@@ -109,7 +109,11 @@ const Index = () => {
               ЧОП «БУРЕВЕСТНИК-РУС» обеспечит охрану порядка любых массовых мероприятий: концерты, корпоративы, спортивные мероприятия, бизнес-конференции
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="bg-gradient-to-r from-gold to-gold-dark text-black font-bold text-lg px-8 py-6 hover:opacity-90 hover-scale">
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-gold to-gold-dark text-black font-bold text-lg px-8 py-6 hover:opacity-90 hover-scale"
+                onClick={() => document.getElementById('контакты')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 <Icon name="Shield" size={20} className="mr-2" />
                 Заказать охрану
               </Button>
