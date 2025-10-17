@@ -435,7 +435,7 @@ const Index = () => {
           </div>
 
           <div className="mt-8 text-center">
-            <p className="text-gray-light mb-4">Минимальный заказ — 4 часа. Ночные часы (с 22:00 до 06:00) +30% к тарифу</p>
+            <p className="text-gray-light mb-4">Минимальный заказ — 4 часа. Каждый час переработки 50% к тарифу</p>
             <Button size="lg" className="bg-gradient-to-r from-gold to-gold-dark text-black font-bold text-lg px-8 py-6 hover:opacity-90">
               <Icon name="Calculator" size={20} className="mr-2" />
               Рассчитать точную стоимость
