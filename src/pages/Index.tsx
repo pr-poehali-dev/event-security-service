@@ -209,8 +209,60 @@ const Index = () => {
         </div>
       </section>
 
+      {/* License Section */}
+      <section id="лицензии" className="py-20 px-4 bg-gradient-to-b from-black to-gray-dark">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4 font-montserrat">
+              Лицензия и сертификаты
+            </h2>
+            <p className="text-gray-light text-lg">Мы работаем официально и имеем все необходимые разрешения</p>
+          </div>
+          
+          <Card className="bg-gradient-to-br from-gray-dark to-black border-2 border-gold/30 hover:border-gold transition-all">
+            <CardContent className="p-8">
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                <div className="w-24 h-24 bg-gradient-to-br from-gold to-gold-dark rounded-full flex items-center justify-center flex-shrink-0">
+                  <Icon name="ShieldCheck" size={48} className="text-black" />
+                </div>
+                <div className="flex-1 text-center md:text-left">
+                  <h3 className="text-2xl font-bold text-white mb-4 font-montserrat">
+                    Лицензия на осуществление частной охранной деятельности
+                  </h3>
+                  <div className="space-y-2 text-gray-light">
+                    <p className="text-lg">
+                      <span className="text-gold font-semibold">№ Л056-00106-77/02339889</span>
+                    </p>
+                    <p className="text-lg">
+                      от <span className="text-gold font-semibold">21 мая 2025 г.</span>
+                    </p>
+                  </div>
+                  <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 bg-gold/10 border border-gold/30 rounded-lg">
+                    <Icon name="CheckCircle" size={20} className="text-gold" />
+                    <span className="text-gold font-semibold">Проверено и подтверждено</span>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              { icon: 'Award', text: 'Соответствие ГОСТ Р' },
+              { icon: 'FileCheck', text: 'Все разрешения' },
+              { icon: 'ShieldCheck', text: 'Страхование' }
+            ].map((item, index) => (
+              <div key={index} className="flex items-center gap-3 bg-black/50 border border-gold/20 rounded-lg p-4">
+                <Icon name={item.icon as any} size={24} className="text-gold" />
+                <span className="text-white font-medium">{item.text}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Contact Form */}
-      <section id="контакты" className="py-20 px-4 bg-gradient-to-b from-black to-gray-dark">
+      <section id="контакты" className="py-20 px-4 bg-gradient-to-b from-gray-dark to-black">
         <div className="container mx-auto max-w-2xl">
           <Card className="bg-gray-dark border-gold/30">
             <CardHeader className="text-center">
