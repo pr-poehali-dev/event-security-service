@@ -678,7 +678,8 @@ const Index = () => {
                 Есть вопросы? Мы перезвоним!
               </CardTitle>
               <CardDescription className="text-gray-light text-lg">
-                Оставьте заявку и наш специалист свяжется с вами в ближайшее время
+                Оставьте заявку сейчас<br />
+                и наш специалист свяжется с вами в ближайшее время
               </CardDescription>
             </CardHeader>
             <CardContent>
