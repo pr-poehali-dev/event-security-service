@@ -317,7 +317,7 @@ const Index = () => {
                   <h3 className="text-green-400 font-bold font-montserrat">Специалист:</h3>
                 </div>
                 <div className="p-4 text-center border-r border-gold/30">
-                  <h3 className="text-cyan-400 font-bold font-montserrat">Профи</h3>
+                  <h3 className="text-cyan-400 font-bold font-montserrat">Профи:</h3>
                 </div>
                 <div className="p-4 text-center">
                   <h3 className="text-purple-400 font-bold font-montserrat">Эксперт:</h3>
@@ -435,7 +435,7 @@ const Index = () => {
           </div>
 
           <div className="mt-8 text-center">
-            <p className="text-gray-light mb-4">Минимальный заказ — 4 часа. Каждый час переработки 50% к тарифу</p>
+            <p className="text-gray-light mb-4">Минимальный заказ — 4 часа. Каждый час переработки +50% к тарифу</p>
             <Button size="lg" className="bg-gradient-to-r from-gold to-gold-dark text-black font-bold text-lg px-8 py-6 hover:opacity-90">
               <Icon name="Calculator" size={20} className="mr-2" />
               Рассчитать точную стоимость
