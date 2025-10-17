@@ -294,6 +294,156 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <section id="тарифы" className="py-20 px-4 bg-gradient-to-b from-gray-dark to-black">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4 font-montserrat">
+              Тарифы на охрану мероприятий
+            </h2>
+            <p className="text-gray-light text-lg">Выберите оптимальный вариант для вашего мероприятия</p>
+          </div>
+
+          <div className="overflow-x-auto">
+            <div className="min-w-[800px] bg-gradient-to-br from-gray-dark to-black border border-gold/30 rounded-lg">
+              <div className="grid grid-cols-5 border-b border-gold/30">
+                <div className="p-4 border-r border-gold/30">
+                  <h3 className="text-white font-bold font-montserrat">Название</h3>
+                </div>
+                <div className="p-4 text-center border-r border-gold/30">
+                  <h3 className="text-orange-400 font-bold font-montserrat">Охранник-контролер:</h3>
+                </div>
+                <div className="p-4 text-center border-r border-gold/30">
+                  <h3 className="text-green-400 font-bold font-montserrat">Специалист:</h3>
+                </div>
+                <div className="p-4 text-center border-r border-gold/30">
+                  <h3 className="text-cyan-400 font-bold font-montserrat">Профи</h3>
+                </div>
+                <div className="p-4 text-center">
+                  <h3 className="text-purple-400 font-bold font-montserrat">Эксперт:</h3>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-5 border-b border-gold/30">
+                <div className="p-4 border-r border-gold/30">
+                  <p className="text-gray-light text-sm">Проверка приглашений</p>
+                </div>
+                <div className="p-4 text-center border-r border-gold/30">
+                  <Icon name="Check" className="text-orange-400 mx-auto" size={20} />
+                </div>
+                <div className="p-4 text-center border-r border-gold/30">
+                  <Icon name="Check" className="text-green-400 mx-auto" size={20} />
+                </div>
+                <div className="p-4 text-center border-r border-gold/30">
+                  <Icon name="Check" className="text-cyan-400 mx-auto" size={20} />
+                </div>
+                <div className="p-4 text-center">
+                  <Icon name="Check" className="text-purple-400 mx-auto" size={20} />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-5 border-b border-gold/30">
+                <div className="p-4 border-r border-gold/30">
+                  <p className="text-gray-light text-sm">Досмотр гостей</p>
+                </div>
+                <div className="p-4 text-center border-r border-gold/30">
+                  <p className="text-orange-400 text-sm">Выборочный</p>
+                </div>
+                <div className="p-4 text-center border-r border-gold/30">
+                  <Icon name="Check" className="text-green-400 mx-auto" size={20} />
+                </div>
+                <div className="p-4 text-center border-r border-gold/30">
+                  <Icon name="Check" className="text-cyan-400 mx-auto" size={20} />
+                </div>
+                <div className="p-4 text-center">
+                  <Icon name="Check" className="text-purple-400 mx-auto" size={20} />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-5 border-b border-gold/30">
+                <div className="p-4 border-r border-gold/30">
+                  <p className="text-gray-light text-sm">Охрана на месте</p>
+                </div>
+                <div className="p-4 text-center border-r border-gold/30">
+                  <Icon name="Check" className="text-orange-400 mx-auto" size={20} />
+                </div>
+                <div className="p-4 text-center border-r border-gold/30">
+                  <Icon name="Check" className="text-green-400 mx-auto" size={20} />
+                </div>
+                <div className="p-4 text-center border-r border-gold/30">
+                  <Icon name="Check" className="text-cyan-400 mx-auto" size={20} />
+                </div>
+                <div className="p-4 text-center">
+                  <Icon name="Check" className="text-purple-400 mx-auto" size={20} />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-5 border-b border-gold/30">
+                <div className="p-4 border-r border-gold/30">
+                  <p className="text-gray-light text-sm">Видеонаблюдение</p>
+                </div>
+                <div className="p-4 text-center border-r border-gold/30">
+                  <p className="text-gray-light">-</p>
+                </div>
+                <div className="p-4 text-center border-r border-gold/30">
+                  <p className="text-green-400 text-sm">По запросу</p>
+                </div>
+                <div className="p-4 text-center border-r border-gold/30">
+                  <Icon name="Check" className="text-cyan-400 mx-auto" size={20} />
+                </div>
+                <div className="p-4 text-center">
+                  <Icon name="Check" className="text-purple-400 mx-auto" size={20} />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-5">
+                <div className="p-4 border-r border-gold/30">
+                  <p className="text-gray-light text-sm">Имидж, максимальная безопасность</p>
+                </div>
+                <div className="p-4 text-center border-r border-gold/30">
+                  <p className="text-gray-light">-</p>
+                </div>
+                <div className="p-4 text-center border-r border-gold/30">
+                  <p className="text-gray-light">-</p>
+                </div>
+                <div className="p-4 text-center border-r border-gold/30">
+                  <p className="text-gray-light">-</p>
+                </div>
+                <div className="p-4 text-center">
+                  <Icon name="Check" className="text-purple-400 mx-auto" size={20} />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-5 bg-gold/10 border-t-2 border-gold/50">
+                <div className="p-4 border-r border-gold/30">
+                  <p className="text-white font-bold font-montserrat">Стоимость / час:</p>
+                </div>
+                <div className="p-4 text-center border-r border-gold/30">
+                  <p className="text-orange-400 font-bold text-lg">1200 ₽</p>
+                </div>
+                <div className="p-4 text-center border-r border-gold/30">
+                  <p className="text-green-400 font-bold text-lg">1500 ₽</p>
+                </div>
+                <div className="p-4 text-center border-r border-gold/30">
+                  <p className="text-cyan-400 font-bold text-lg">2000 ₽</p>
+                </div>
+                <div className="p-4 text-center">
+                  <p className="text-purple-400 font-bold text-lg">3000 ₽</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 text-center">
+            <p className="text-gray-light mb-4">Минимальный заказ — 4 часа. Ночные часы (с 22:00 до 06:00) +30% к тарифу</p>
+            <Button size="lg" className="bg-gradient-to-r from-gold to-gold-dark text-black font-bold text-lg px-8 py-6 hover:opacity-90">
+              <Icon name="Calculator" size={20} className="mr-2" />
+              Рассчитать точную стоимость
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Reviews Section */}
       <section id="отзывы" className="py-20 px-4 bg-gradient-to-b from-black to-gray-dark">
         <div className="container mx-auto">
