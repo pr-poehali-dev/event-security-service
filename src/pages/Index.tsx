@@ -323,7 +323,8 @@ const Index = () => {
                 <h3 className="text-xl font-bold text-white font-montserrat">БУРЕВЕСТНИК-РУС</h3>
               </div>
               <p className="text-gray-light text-sm mb-4">
-                Алабяна 10 корпус 3, 14 подъезд
+                индекс 109156, г. Люберцы,<br />
+                ул. Комсомольская д. 15А, пом. 25
               </p>
               <p className="text-gray-light text-sm">Пн-Пт: 8:00 - 21:00</p>
             </div>
