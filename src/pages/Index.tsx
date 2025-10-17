@@ -150,7 +150,11 @@ const Index = () => {
                 Охрана для мероприятия от 1200 ₽/час
               </p>
             </div>
-            <Button size="lg" className="bg-black text-white hover:bg-gray-dark font-bold">
+            <Button 
+              size="lg" 
+              className="bg-black text-white hover:bg-gray-dark font-bold"
+              onClick={() => document.getElementById('тарифы')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Рассчитать стоимость
             </Button>
           </div>
