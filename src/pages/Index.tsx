@@ -12,6 +12,27 @@ const Index = () => {
     message: ''
   });
 
+  const [calculator, setCalculator] = useState({
+    tariff: 'controller',
+    guards: 1,
+    hours: 4,
+    overtime: 0
+  });
+
+  const tariffPrices: Record<string, number> = {
+    controller: 1200,
+    specialist: 1500,
+    profi: 2000,
+    expert: 3000
+  };
+
+  const calculateTotal = () => {
+    const basePrice = tariffPrices[calculator.tariff];
+    const regularCost = basePrice * calculator.guards * calculator.hours;
+    const overtimeCost = basePrice * 1.5 * calculator.guards * calculator.overtime;
+    return regularCost + overtimeCost;
+  };
+
   const services = [
     { icon: 'Music', title: 'Концерты', description: 'Охрана концертов' },
     { icon: 'Briefcase', title: 'Корпоративы', description: 'Охрана корпоративов' },
@@ -434,12 +455,90 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="mt-8 text-center">
-            <p className="text-gray-light mb-4">Минимальный заказ — 4 часа. Каждый час переработки +50% к тарифу</p>
-            <Button size="lg" className="bg-gradient-to-r from-gold to-gold-dark text-black font-bold text-lg px-8 py-6 hover:opacity-90">
-              <Icon name="Calculator" size={20} className="mr-2" />
-              Рассчитать точную стоимость
-            </Button>
+          <div className="mt-12">
+            <Card className="bg-gradient-to-br from-gray-dark to-black border-gold/30 max-w-4xl mx-auto">
+              <CardHeader className="text-center">
+                <CardTitle className="text-2xl font-bold text-white font-montserrat">
+                  <Icon name="Calculator" size={24} className="inline mr-2" />
+                  Калькулятор стоимости
+                </CardTitle>
+                <CardDescription className="text-gray-light">
+                  Рассчитайте приблизительную стоимость охраны вашего мероприятия
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="text-white font-semibold mb-2 block">Выберите тариф:</label>
+                    <select
+                      value={calculator.tariff}
+                      onChange={(e) => setCalculator({ ...calculator, tariff: e.target.value })}
+                      className="w-full bg-black border border-gold/30 text-white rounded-lg px-4 py-3 focus:border-gold focus:outline-none"
+                    >
+                      <option value="controller">Охранник-контролер (1200 ₽/час)</option>
+                      <option value="specialist">Специалист (1500 ₽/час)</option>
+                      <option value="profi">Профи (2000 ₽/час)</option>
+                      <option value="expert">Эксперт (3000 ₽/час)</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="text-white font-semibold mb-2 block">Количество охранников:</label>
+                    <Input
+                      type="number"
+                      min="1"
+                      value={calculator.guards}
+                      onChange={(e) => setCalculator({ ...calculator, guards: parseInt(e.target.value) || 1 })}
+                      className="bg-black border-gold/30 text-white focus:border-gold"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="text-white font-semibold mb-2 block">Количество часов (мин. 4):</label>
+                    <Input
+                      type="number"
+                      min="4"
+                      value={calculator.hours}
+                      onChange={(e) => setCalculator({ ...calculator, hours: Math.max(4, parseInt(e.target.value) || 4) })}
+                      className="bg-black border-gold/30 text-white focus:border-gold"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="text-white font-semibold mb-2 block">Часы переработки (+50%):</label>
+                    <Input
+                      type="number"
+                      min="0"
+                      value={calculator.overtime}
+                      onChange={(e) => setCalculator({ ...calculator, overtime: parseInt(e.target.value) || 0 })}
+                      className="bg-black border-gold/30 text-white focus:border-gold"
+                    />
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-r from-gold/20 to-gold-dark/20 border-2 border-gold rounded-lg p-6 text-center">
+                  <p className="text-gray-light text-lg mb-2">Итоговая стоимость:</p>
+                  <p className="text-gold text-4xl font-bold font-montserrat">
+                    {calculateTotal().toLocaleString('ru-RU')} ₽
+                  </p>
+                  {calculator.overtime > 0 && (
+                    <p className="text-sm text-gray-light mt-2">
+                      Включая {calculator.overtime} ч. переработки ({(tariffPrices[calculator.tariff] * 1.5 * calculator.guards * calculator.overtime).toLocaleString('ru-RU')} ₽)
+                    </p>
+                  )}
+                </div>
+
+                <div className="text-center">
+                  <p className="text-gray-light text-sm mb-4">
+                    * Минимальный заказ — 4 часа. Каждый час переработки +50% к тарифу
+                  </p>
+                  <Button size="lg" className="bg-gradient-to-r from-gold to-gold-dark text-black font-bold text-lg px-8 py-6 hover:opacity-90">
+                    <Icon name="Phone" size={20} className="mr-2" />
+                    Оформить заказ
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
