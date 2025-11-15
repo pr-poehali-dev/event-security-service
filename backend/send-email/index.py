@@ -14,15 +14,15 @@ from pydantic import BaseModel, Field, field_validator
 
 class ContactForm(BaseModel):
     name: str = Field(..., min_length=1, max_length=100)
-    phone: str = Field(..., min_length=10, max_length=20)
+    phone: str = Field(..., min_length=5, max_length=20)
     message: str = Field(default='', max_length=1000)
     
     @field_validator('phone')
     @classmethod
     def validate_phone(cls, v: str) -> str:
         cleaned = ''.join(filter(str.isdigit, v))
-        if len(cleaned) < 10:
-            raise ValueError('Телефон должен содержать минимум 10 цифр')
+        if len(cleaned) < 7:
+            raise ValueError('Телефон должен содержать минимум 7 цифр')
         return v
 
 def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
@@ -121,12 +121,14 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
             'body': json.dumps({'success': True, 'message': 'Заявка отправлена'})
         }
     
-    except smtplib.SMTPAuthenticationError:
+    except smtplib.SMTPAuthenticationError as e:
+        print(f'SMTP Auth Error: {str(e)}')
+        print(f'Email used: {sender_email}')
         return {
             'statusCode': 500,
             'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
             'isBase64Encoded': False,
-            'body': json.dumps({'error': 'Ошибка авторизации в почте. Проверьте пароль приложения'})
+            'body': json.dumps({'error': f'Ошибка авторизации: {str(e)}'})
         }
     except Exception as e:
         return {
