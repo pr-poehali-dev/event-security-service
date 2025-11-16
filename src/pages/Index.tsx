@@ -101,11 +101,13 @@ const Index = () => {
               </div>
             </div>
             <div className="hidden md:flex gap-6">
-              {['Главная', 'Услуги', 'О компании', 'Тарифы', 'Лицензии', 'Отзывы', 'Контакты'].map((item) => (
-                <a key={item} href={`#${item.toLowerCase()}`} className="text-white hover:text-gold transition-colors font-montserrat text-sm">
-                  {item}
-                </a>
-              ))}
+              <a href="#главная" className="text-white hover:text-gold transition-colors font-montserrat text-sm">Главная</a>
+              <a href="#услуги" className="text-white hover:text-gold transition-colors font-montserrat text-sm">Услуги</a>
+              <a href="#о-компании" className="text-white hover:text-gold transition-colors font-montserrat text-sm">О компании</a>
+              <a href="#тарифы" className="text-white hover:text-gold transition-colors font-montserrat text-sm">Тарифы</a>
+              <a href="#лицензии" className="text-white hover:text-gold transition-colors font-montserrat text-sm">Лицензии</a>
+              <a href="#отзывы" className="text-white hover:text-gold transition-colors font-montserrat text-sm">Отзывы</a>
+              <a href="#контакты" className="text-white hover:text-gold transition-colors font-montserrat text-sm">Контакты</a>
             </div>
             <Button 
               className="hidden md:flex items-center bg-gradient-to-r from-gold to-gold-dark text-black font-bold hover:opacity-90"
@@ -211,7 +213,7 @@ const Index = () => {
       </section>
 
       {/* About Company */}
-      <section id="о компании" className="py-20 px-4 bg-gradient-to-b from-black to-gray-dark">
+      <section id="о-компании" className="py-20 px-4 bg-gradient-to-b from-black to-gray-dark">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
