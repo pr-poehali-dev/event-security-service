@@ -57,6 +57,14 @@ const Index = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState('');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const scrollToSection = (id: string) => {
+    setIsMobileMenuOpen(false);
+    setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -101,23 +109,54 @@ const Index = () => {
               </div>
             </div>
             <div className="hidden md:flex gap-6">
-              <a href="#главная" className="text-white hover:text-gold transition-colors font-montserrat text-sm">Главная</a>
-              <a href="#услуги" className="text-white hover:text-gold transition-colors font-montserrat text-sm">Услуги</a>
-              <a href="#о-компании" className="text-white hover:text-gold transition-colors font-montserrat text-sm">О компании</a>
-              <a href="#тарифы" className="text-white hover:text-gold transition-colors font-montserrat text-sm">Тарифы</a>
-              <a href="#лицензии" className="text-white hover:text-gold transition-colors font-montserrat text-sm">Лицензии</a>
-              <a href="#отзывы" className="text-white hover:text-gold transition-colors font-montserrat text-sm">Отзывы</a>
-              <a href="#контакты" className="text-white hover:text-gold transition-colors font-montserrat text-sm">Контакты</a>
+              <button onClick={() => scrollToSection('главная')} className="text-white hover:text-gold transition-colors font-montserrat text-sm">Главная</button>
+              <button onClick={() => scrollToSection('услуги')} className="text-white hover:text-gold transition-colors font-montserrat text-sm">Услуги</button>
+              <button onClick={() => scrollToSection('о-компании')} className="text-white hover:text-gold transition-colors font-montserrat text-sm">О компании</button>
+              <button onClick={() => scrollToSection('тарифы')} className="text-white hover:text-gold transition-colors font-montserrat text-sm">Тарифы</button>
+              <button onClick={() => scrollToSection('лицензии')} className="text-white hover:text-gold transition-colors font-montserrat text-sm">Лицензии</button>
+              <button onClick={() => scrollToSection('отзывы')} className="text-white hover:text-gold transition-colors font-montserrat text-sm">Отзывы</button>
+              <button onClick={() => scrollToSection('контакты')} className="text-white hover:text-gold transition-colors font-montserrat text-sm">Контакты</button>
             </div>
-            <Button 
-              className="hidden md:flex items-center bg-gradient-to-r from-gold to-gold-dark text-black font-bold hover:opacity-90"
-              onClick={() => document.getElementById('контакты')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              <Icon name="Phone" size={16} className="mr-2" />
-              Заказать звонок
-            </Button>
+            <div className="flex items-center gap-3">
+              <Button 
+                className="hidden md:flex items-center bg-gradient-to-r from-gold to-gold-dark text-black font-bold hover:opacity-90"
+                onClick={() => scrollToSection('контакты')}
+              >
+                <Icon name="Phone" size={16} className="mr-2" />
+                Заказать звонок
+              </Button>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="md:hidden text-white hover:text-gold hover:bg-gold/10"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              >
+                <Icon name={isMobileMenuOpen ? 'X' : 'Menu'} size={24} />
+              </Button>
+            </div>
           </div>
         </div>
+        
+        {isMobileMenuOpen && (
+          <div className="md:hidden bg-black/98 border-t border-gold/20 animate-in slide-in-from-top">
+            <div className="container mx-auto px-4 py-6 flex flex-col gap-3">
+              <button onClick={() => scrollToSection('главная')} className="text-white hover:text-gold transition-colors font-montserrat text-left py-3 border-b border-gold/10">Главная</button>
+              <button onClick={() => scrollToSection('услуги')} className="text-white hover:text-gold transition-colors font-montserrat text-left py-3 border-b border-gold/10">Услуги</button>
+              <button onClick={() => scrollToSection('о-компании')} className="text-white hover:text-gold transition-colors font-montserrat text-left py-3 border-b border-gold/10">О компании</button>
+              <button onClick={() => scrollToSection('тарифы')} className="text-white hover:text-gold transition-colors font-montserrat text-left py-3 border-b border-gold/10">Тарифы</button>
+              <button onClick={() => scrollToSection('лицензии')} className="text-white hover:text-gold transition-colors font-montserrat text-left py-3 border-b border-gold/10">Лицензии</button>
+              <button onClick={() => scrollToSection('отзывы')} className="text-white hover:text-gold transition-colors font-montserrat text-left py-3 border-b border-gold/10">Отзывы</button>
+              <button onClick={() => scrollToSection('контакты')} className="text-white hover:text-gold transition-colors font-montserrat text-left py-3 border-b border-gold/10">Контакты</button>
+              <Button 
+                className="w-full bg-gradient-to-r from-gold to-gold-dark text-black font-bold hover:opacity-90 mt-4"
+                onClick={() => scrollToSection('контакты')}
+              >
+                <Icon name="Phone" size={16} className="mr-2" />
+                Заказать звонок
+              </Button>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
