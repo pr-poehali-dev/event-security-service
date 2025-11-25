@@ -850,10 +850,7 @@ const Index = () => {
             <div>
               <h4 className="text-white font-bold mb-4 font-montserrat">Контакты</h4>
               <div className="space-y-3">
-                <a href="tel:84990000000" className="flex items-center gap-2 text-gold hover:text-gold-light transition-colors">
-                  <Icon name="Phone" size={16} />
-                  8 (499) 000-00-00
-                </a>
+                <a href="tel:84990000000" className="flex items-center gap-2 text-gold hover:text-gold-light transition-colors">‪+7 999 553‑22‑12‬</a>
                 <a href="mailto:sales@brv-rus.ru" className="flex items-center gap-2 text-gold hover:text-gold-light transition-colors">
                   <Icon name="Mail" size={16} />
                   sales@brv-rus.ru
