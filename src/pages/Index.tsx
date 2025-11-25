@@ -186,10 +186,7 @@ const Index = () => {
                 <Icon name="Shield" size={20} className="mr-2" />
                 Заказать охрану
               </Button>
-              <Button size="lg" variant="outline" className="border-gold text-gold hover:bg-gold/10 text-lg px-8 py-6">
-                <Icon name="Phone" size={20} className="mr-2" />
-                8 (499) 000-00-00
-              </Button>
+              <Button size="lg" variant="outline" className="border-gold text-gold hover:bg-gold/10 text-lg px-8 py-6">‪+7 999 553‑22‑12‬</Button>
             </div>
             <div className="mt-12 grid grid-cols-3 gap-8 max-w-2xl mx-auto">
               <div className="text-center">
