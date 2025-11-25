@@ -66,7 +66,7 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*'
             },
-            'body': json.dumps({'error': 'Email не настроен. Пожалуйста, позвоните нам: 8 (499) 000-00-00'}),
+            'body': json.dumps({'error': 'Email не настроен. Пожалуйста, позвоните нам: +7 999 553-22-12'}),
             'isBase64Encoded': False
         }
     
